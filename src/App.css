@@ -1,0 +1,51 @@
+.app {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	min-width: 1140px;
+	min-height: 100vh;
+}
+
+.header {
+	width: 100%;
+	padding: 20px 0;
+	gap: 20px;
+	border-bottom: 1px solid var(--secondary-background);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header h1 {
+	font-size: 64px;
+}
+
+.header-links {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.header button svg {
+	color: var(--primary-text);
+	width: 30px;
+	height: 30px;
+	animation: zoomIn 0.5s cubic-bezier(0.79, 0, 0.37, 2);
+}
+
+@keyframes zoomIn {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
