@@ -1,0 +1,33 @@
+.drawer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 25vw;
+	background-color: var(--secondary-background);
+	transform: translateX(100%);
+	transition: all 0.2s linear;
+	z-index: 5;
+}
+
+.drawer-open {
+	transform: translateX(0);
+}
+
+.drawer-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 4;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s linear;
+}
+
+.drawer-overlay-shown {
+	opacity: 1;
+	visibility: visible;
+}

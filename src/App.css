@@ -4,42 +4,62 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 
 .container {
-	min-width: 1140px;
+	position: relative;
+	width: 1140px;
 	min-height: 100vh;
 }
 
-.header {
-	width: 100%;
-	padding: 20px 0;
+.feed-wrapper {
+	padding-top: 20px;
+	display: grid;
+	grid-template-columns: 75% 25%;
 	gap: 20px;
-	border-bottom: 1px solid var(--secondary-background);
+}
+
+.feed {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	gap: 20px;
 }
 
-.header h1 {
-	font-size: 64px;
+.suggested {
+	width: 100%;
+	height: fit-content;
+	border: 1px solid var(--secondary-background);
+	padding: 20px;
+	border-radius: 6px;
+	position: sticky;
+	top: 20px;
 }
 
-.header-links {
+.suggested h2 {
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+
+.suggested-users {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.suggested-user {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 	gap: 10px;
 }
 
-.header button svg {
-	color: var(--primary-text);
-	width: 30px;
-	height: 30px;
-	animation: zoomIn 0.5s cubic-bezier(0.79, 0, 0.37, 2);
+.suggested-user img {
+	width: 50px;
+	height: 50px;
+	border-radius: 6px;
 }
+
+/* Animations */
 
 @keyframes zoomIn {
 	from {
@@ -48,4 +68,42 @@
 	to {
 		transform: scale(1);
 	}
+}
+
+/* Quill */
+.ql-create {
+	width: 100%;
+	height: fit-content;
+	border: 1px solid var(--secondary-background) !important;
+	border-radius: 6px;
+	transition: border 0.2s linear;
+}
+
+.ql-create:focus-within {
+	border: 1px solid var(--primary-text) !important;
+}
+
+.ql-toolbar {
+	border: 0 !important;
+	padding: 10px 15px !important;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.ql-editor {
+	border-top: 1px solid var(--secondary-background) !important;
+	padding: 10px 20px !important;
+}
+
+.ql-editor.ql-blank::before {
+	color: var(--primary-text) !important;
+	opacity: 75%;
+	font-style: normal !important;
+	left: 20px !important;
+}
+
+.ql-container {
+	font-size: 16px !important;
+	color: var(--primary-text) !important;
+	border: 0 !important;
 }

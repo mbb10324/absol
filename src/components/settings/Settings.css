@@ -1,0 +1,24 @@
+.settings {
+	padding: 20px;
+}
+
+.settings h2 {
+	font-size: 32px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.theme-picker {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 18px;
+	gap: 10px;
+}
+
+.close-settings-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: transparent;
+}
