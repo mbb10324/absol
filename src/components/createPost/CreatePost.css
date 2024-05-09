@@ -1,0 +1,48 @@
+/* Quill */
+
+.quill-wrapper {
+	width: 100%;
+	height: fit-content;
+	position: relative;
+	border: 1px solid var(--secondary-background) !important;
+	transition: border 0.2s linear;
+	border-radius: 6px;
+}
+
+.quill-wrapper:focus-within {
+	border: 1px solid var(--primary-text) !important;
+}
+
+.ql-create {
+	width: 100%;
+}
+
+.ql-toolbar {
+	border: 0 !important;
+	padding: 10px 15px !important;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.ql-bg-blue {
+	fill: var(--primary-text) !important;
+	color: var(--primary-text) !important;
+}
+
+.ql-editor {
+	border-top: 1px solid var(--secondary-background) !important;
+	padding: 10px 20px !important;
+}
+
+.ql-editor.ql-blank::before {
+	color: var(--primary-text) !important;
+	opacity: 75%;
+	font-style: normal !important;
+	left: 20px !important;
+}
+
+.ql-container {
+	font-size: 16px !important;
+	color: var(--primary-text) !important;
+	border: 0 !important;
+}

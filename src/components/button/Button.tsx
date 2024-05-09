@@ -6,10 +6,11 @@ type ButtonProps = {
 	children: React.ReactNode;
 	variant?: "primary" | "secondary";
 	selected?: boolean;
+	style?: React.CSSProperties;
 };
 
 export default function Button(props: ButtonProps) {
-	const { onClick, className, children, variant = "primary", selected = false } = props;
+	const { onClick, className, children, variant = "primary", selected = false, style } = props;
 	const thisBackgroundColor = variant === "primary" ? "var(--primary-background)" : "var(--secondary-background)";
 	const thisBorderColor = selected ? "var(--primary-text)" : variant === "primary" ? "var(--primary-background)" : "var(--secondary-background)";
 
@@ -17,7 +18,7 @@ export default function Button(props: ButtonProps) {
 		<button
 			onClick={onClick}
 			className={className || "absol-btn"}
-			style={{ backgroundColor: thisBackgroundColor, borderColor: thisBorderColor, pointerEvents: selected ? "none" : "all" }}
+			style={{ ...style, backgroundColor: thisBackgroundColor, borderColor: thisBorderColor, pointerEvents: selected ? "none" : "all" }}
 		>
 			{children}
 		</button>

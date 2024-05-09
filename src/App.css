@@ -9,14 +9,14 @@
 
 .container {
 	position: relative;
-	width: 1140px;
+	width: 1200px;
 	min-height: 100vh;
 }
 
-.feed-wrapper {
-	padding-top: 20px;
+.content {
+	padding: 20px;
 	display: grid;
-	grid-template-columns: 75% 25%;
+	grid-template-columns: 860px 280px;
 	gap: 20px;
 }
 
@@ -26,40 +26,27 @@
 	gap: 20px;
 }
 
-.suggested {
+.side-bar {
 	width: 100%;
 	height: fit-content;
-	border: 1px solid var(--secondary-background);
-	padding: 20px;
 	border-radius: 6px;
 	position: sticky;
 	top: 20px;
-}
-
-.suggested h2 {
-	font-size: 24px;
-	padding-bottom: 20px;
-}
-
-.suggested-users {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 }
 
-.suggested-user {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-}
-
-.suggested-user img {
-	width: 50px;
-	height: 50px;
-	border-radius: 6px;
-}
-
 /* Animations */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 @keyframes zoomIn {
 	from {
@@ -68,42 +55,4 @@
 	to {
 		transform: scale(1);
 	}
-}
-
-/* Quill */
-.ql-create {
-	width: 100%;
-	height: fit-content;
-	border: 1px solid var(--secondary-background) !important;
-	border-radius: 6px;
-	transition: border 0.2s linear;
-}
-
-.ql-create:focus-within {
-	border: 1px solid var(--primary-text) !important;
-}
-
-.ql-toolbar {
-	border: 0 !important;
-	padding: 10px 15px !important;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-}
-
-.ql-editor {
-	border-top: 1px solid var(--secondary-background) !important;
-	padding: 10px 20px !important;
-}
-
-.ql-editor.ql-blank::before {
-	color: var(--primary-text) !important;
-	opacity: 75%;
-	font-style: normal !important;
-	left: 20px !important;
-}
-
-.ql-container {
-	font-size: 16px !important;
-	color: var(--primary-text) !important;
-	border: 0 !important;
 }

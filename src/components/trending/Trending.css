@@ -1,0 +1,32 @@
+.trending {
+	border: 1px solid var(--secondary-background);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 20px;
+}
+
+.trending h2 {
+	font-size: 24px;
+	font-weight: 800;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
+}
+
+.trending-hashtags {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.trending-hashtags h3 {
+	border-radius: 6px;
+	padding: 5px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+.trending-hashtags h3:hover {
+	background-color: var(--secondary-background);
+}

@@ -13,6 +13,7 @@
 	letter-spacing: 2px;
 	cursor: pointer;
 	transition: all 0.2s linear;
+	animation: fadeIn 0.2s linear;
 }
 
 .absol-btn:hover {
