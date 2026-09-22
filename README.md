@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# Absol
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Absol is a planned smart email service with AI-assisted creation and social publishing. Users create expressive messages that can be sent privately, published publicly, or shared with groups. One canonical document powers the rich Absol experience and a conventional email representation.
 
-Currently, two official plugins are available:
+**Current status:** an early React/TypeScript/Vite scaffold with a mock feed, basic Quill editor, and theme controls. The product described below is planned, not yet implemented.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project plan
 
-## Expanding the ESLint configuration
+Start with [CONTEXT.md](CONTEXT.md) for the agreed scope, architectural rules, implementation sequence, and current state.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The complete user-authored specification and amendments are preserved in the repository:
 
-- Configure the top-level `parserOptions` property like this:
+1. [Product specification](docs/plan/product-specification.md)
+2. [Architecture clarifications](docs/plan/architecture-clarifications.md)
+3. [Final Milestone 1 amendments](docs/plan/milestone-1-amendments.md)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Later amendments supersede conflicting details in earlier documents. The current target is **Milestone 1: The Absol Loop**:
+
+> Local identity → AI generation → manual block editing → Absol and Email previews → explicit public publication → immutable message in Home and on a standalone page.
+
+The initial editor supports Heading, Rich Text, Image, Button, Divider, Columns, and Video. Private messaging, groups, discovery, and AI search follow in later milestones. Freeform layout is deferred.
+
+## Local development
+
+```sh
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Existing checks:
+
+```sh
+npm run build
+npm run lint
+```
+
+The current scaffold has no AI server, real authentication, mailbox provisioning, or email delivery. The planned prototype will run locally with IndexedDB persistence and a server-side OpenAI integration. AI configuration and startup instructions will be added when that integration is implemented.
